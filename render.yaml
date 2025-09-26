@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: hushgram-chat
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: VITE_CONVEX_URL
+        sync: false
+      - key: NODE_VERSION
+        value: "18"
